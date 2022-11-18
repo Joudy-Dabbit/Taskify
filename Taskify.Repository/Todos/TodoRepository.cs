@@ -19,13 +19,13 @@ namespace Taskify.Repositories.Todos
 
         public async Task<OperationResult<List<GetTodoDto>>> GetAll()
         {
-            var todos = await Context.Todos.Select(TodoStore.Query.GetAllTodo).ToListAsync();
+            var todos = await Context.Todos.Where(t => !t.DateDeleted.HasValue).Select(TodoStore.Query.GetAllTodo).ToListAsync();
 
             return _Operation.SetSuccess(todos);
         }
         public async Task<OperationResult<GetTodoDto>> GetById(Guid id)
         {
-            var todo = await Context.Todos.Where(t => t.Id == id)
+            var todo = await Context.Todos.Where(t => t.Id == id && !t.DateDeleted.HasValue)
                                            .Select(TodoStore.Query.GetAllTodo)
                                            .FirstAsync();
 
