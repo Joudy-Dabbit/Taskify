@@ -11,13 +11,13 @@ using Taskify.Repository.Security.Main;
 
 namespace Taskify.DataSource
 {
-    public class TaskifyContaxt : IdentityDbContext<User, IdentityRole<Guid>, Guid>
+    public class TaskifyContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         #region - constructor - 
-        public TaskifyContaxt(DbContextOptions options) : base(options)
+        public TaskifyContext(DbContextOptions options) : base(options)
         {
         }
         #endregion
-        public DbSet<Todo> Todos { get; set; }
+        public DbSet<Todo>? Todos { get; set; }
     }
 }

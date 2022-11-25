@@ -15,7 +15,7 @@ namespace Taskify.Repositories.Todos
 {
     public class TodoRepository :  BaseRepository, ITodoRepository
     {
-        public TodoRepository(TaskifyContaxt context) : base(context)  {  }
+        public TodoRepository(TaskifyContext context) : base(context)  {  }
 
         public async Task<OperationResult<List<GetTodoDto>>> GetAll()
         {

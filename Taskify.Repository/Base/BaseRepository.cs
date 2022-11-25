@@ -10,9 +10,9 @@ namespace Taskify.Repositories.Base
 {
     public class BaseRepository
     {
-        public TaskifyContaxt Context { get; set; }
+        public TaskifyContext Context { get; set; }
 
-        public BaseRepository(TaskifyContaxt context)
+        public BaseRepository(TaskifyContext context)
         {
             Context = context;
         }

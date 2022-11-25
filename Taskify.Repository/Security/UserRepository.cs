@@ -19,7 +19,7 @@ namespace Taskify.Repositories.Security
 
         private readonly UserManager<User> _userManager;
 
-        public UserRepository(UserManager<User> userManager, TaskifyContaxt contaxt) 
+        public UserRepository(UserManager<User> userManager, TaskifyContext contaxt) 
             : base(contaxt)
         {
             _userManager = userManager;

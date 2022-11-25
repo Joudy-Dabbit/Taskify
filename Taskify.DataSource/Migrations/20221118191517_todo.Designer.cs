@@ -11,7 +11,7 @@ using Taskify.DataSource;
 
 namespace Taskify.DataSource.Migrations
 {
-    [DbContext(typeof(TaskifyContaxt))]
+    [DbContext(typeof(TaskifyContext))]
     [Migration("20221118191517_todo")]
     partial class todo
     {

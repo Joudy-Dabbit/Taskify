@@ -10,7 +10,7 @@ using Taskify.DataSource;
 
 namespace Taskify.DataSource.Migrations
 {
-    [DbContext(typeof(TaskifyContaxt))]
+    [DbContext(typeof(TaskifyContext))]
     partial class TaskifyContaxtModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
